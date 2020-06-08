@@ -9,7 +9,7 @@ const Form = () => {
     category: '',
   })
   const { categories } = useContext(CategoryContext)
-  const { setSearchDrink } = useContext(RecipesContext)
+  const { setSearchDrink, setConsult } = useContext(RecipesContext)
 
   const handleChange = e => {
     e.preventDefault();
@@ -24,7 +24,8 @@ const Form = () => {
       className="col-12"
       onSubmit={e => {
         e.preventDefault();
-        setSearchDrink(search)
+        setSearchDrink(search);
+        setConsult(true);
       }}
     >
       <fieldset className="text-center">
